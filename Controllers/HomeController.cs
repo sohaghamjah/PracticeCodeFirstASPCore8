@@ -26,9 +26,19 @@ namespace CodeFirstASPCore8.Controllers
             return View(stdData);
         }
 
-        public IActionResult Privacy()
+        public IActionResult Create()
         {
             return View();
+        }
+        [HttpPost]
+        public IActionResult Create(Student std)
+        {
+            return View();
+        }
+
+        public IActionResult Privacy()
+        {
+            return View(); 
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
