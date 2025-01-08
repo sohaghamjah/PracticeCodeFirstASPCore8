@@ -6,16 +6,24 @@ namespace CodeFirstASPCore8.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly StudentDBContext studentDB;
 
-        public HomeController(ILogger<HomeController> logger)
+        //private readonly ILogger<HomeController> _logger;
+
+        //public HomeController(ILogger<HomeController> logger)
+        //{
+        //    _logger = logger;
+        //}
+
+        public HomeController(StudentDBContext studentDB)
         {
-            _logger = logger;
+            this.studentDB = studentDB;
         }
 
         public IActionResult Index()
         {
-            return View();
+            var stdData = studentDB.Students.ToList();
+            return View(stdData);
         }
 
         public IActionResult Privacy()

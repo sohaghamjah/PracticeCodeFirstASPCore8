@@ -1,7 +1,13 @@
+using Microsoft.EntityFrameworkCore;
+using CodeFirstASPCore8.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddDbContext<StudentDBContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DBCS") ?? throw new InvalidOperationException("Connection string 'DBCS' not found.")));
 
 var app = builder.Build();
 
