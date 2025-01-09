@@ -46,8 +46,59 @@ namespace CodeFirstASPCore8.Controllers
         public async Task<IActionResult> Details(int Id)
         {
             var stdData = await studentDB.Students.FirstOrDefaultAsync (x => x.Id == Id);
+            if (stdData == null) { 
+                return NotFound();
+            }
             return View(stdData);
         }
+
+        public async Task<IActionResult> Edit(int Id)
+        {
+            var stdData = await studentDB.Students.FindAsync(Id);
+            if (stdData == null)
+            {
+                return NotFound();
+            }
+            return View(stdData);
+        }
+        [HttpPost]
+        public async Task<IActionResult> Edit(int? Id, Student stdData)
+        {
+            if (ModelState.IsValid) { 
+                studentDB.Students.Update(stdData);
+                await studentDB.SaveChangesAsync();
+                TempData["SuccessMessage"] = "Student data has been updated successfully!";
+                return RedirectToAction("Index", "Home");
+            }
+            return View(stdData);
+        }
+
+        public async Task<ActionResult> Delete(int? Id) {
+            var stdData = await studentDB.Students.FirstOrDefaultAsync(x => x.Id == Id);
+            return View(stdData);
+        }
+
+        [HttpPost, ActionName("Delete")]
+        public async Task<IActionResult> DeleteConfirmed(int? Id)
+        {
+            if (Id == null)
+            {
+                return NotFound();
+            }
+
+            var stdData = await studentDB.Students.FirstOrDefaultAsync(x => x.Id == Id);
+            if (stdData == null)
+            {
+                return NotFound();
+            }
+
+            studentDB.Students.Remove(stdData);
+            await studentDB.SaveChangesAsync();
+
+            TempData["SuccessMessage"] = "Student data has been deleted successfully!";
+            return RedirectToAction("Index", "Home");
+        }
+
 
         public IActionResult Privacy()
         {
