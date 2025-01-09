@@ -26,6 +26,14 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\sohag.miah\OneDrive - Akij Venture Ltd\Documents\Takaful-Files\projects\Dot Net Core\CodeFirstASPCore8\CodeFirstASPCore8
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/sohag.miah/OneDrive - Akij Venture Ltd/Documents/Takaful-Files/projects/Dot Net Core/CodeFirstASPCore8/CodeFirstASPCore8/Views/Home/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sohag.miah/OneDrive - Akij Venture Ltd/Documents/Takaful-Files/projects/Dot Net Core/CodeFirstASPCore8/CodeFirstASPCore8/Views/Home/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/sohag.miah/OneDrive - Akij Venture Ltd/Documents/Takaful-Files/projects/Dot Net Core/CodeFirstASPCore8/CodeFirstASPCore8/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
