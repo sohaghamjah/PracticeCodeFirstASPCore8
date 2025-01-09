@@ -1,5 +1,6 @@
 using CodeFirstASPCore8.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.Diagnostics;
 
 namespace CodeFirstASPCore8.Controllers
@@ -31,9 +32,21 @@ namespace CodeFirstASPCore8.Controllers
             return View();
         }
         [HttpPost]
-        public IActionResult Create(Student std)
+        public async Task<IActionResult> Create(Student std)
         {
-            return View();
+            if (ModelState.IsValid) { 
+                await studentDB.Students.AddAsync(std);
+                await studentDB.SaveChangesAsync();
+                TempData["SuccessMessage"] = "Student data has been saved successfully!";
+                return RedirectToAction("Index", "Home");
+            }
+            return View(std);
+        }
+
+        public async Task<IActionResult> Details(int Id)
+        {
+            var stdData = await studentDB.Students.FirstOrDefaultAsync (x => x.Id == Id);
+            return View(stdData);
         }
 
         public IActionResult Privacy()
