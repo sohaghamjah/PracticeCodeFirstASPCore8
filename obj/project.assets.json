@@ -7721,11 +7721,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\sohag.miah\\OneDrive - Akij Venture Ltd\\Documents\\Takaful-Files\\projects\\Dot Net Core\\CodeFirstASPCore8\\CodeFirstASPCore8\\CodeFirstASPCore8.csproj",
+      "projectUniqueName": "C:\\Dot Net Core\\CodeFirstASPCore8\\CodeFirstASPCore8\\CodeFirstASPCore8.csproj",
       "projectName": "CodeFirstASPCore8",
-      "projectPath": "C:\\Users\\sohag.miah\\OneDrive - Akij Venture Ltd\\Documents\\Takaful-Files\\projects\\Dot Net Core\\CodeFirstASPCore8\\CodeFirstASPCore8\\CodeFirstASPCore8.csproj",
+      "projectPath": "C:\\Dot Net Core\\CodeFirstASPCore8\\CodeFirstASPCore8\\CodeFirstASPCore8.csproj",
       "packagesPath": "C:\\Users\\sohag.miah\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\sohag.miah\\OneDrive - Akij Venture Ltd\\Documents\\Takaful-Files\\projects\\Dot Net Core\\CodeFirstASPCore8\\CodeFirstASPCore8\\obj\\",
+      "outputPath": "C:\\Dot Net Core\\CodeFirstASPCore8\\CodeFirstASPCore8\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\sohag.miah\\AppData\\Roaming\\NuGet\\NuGet.Config",
